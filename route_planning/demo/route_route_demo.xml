@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="route_north_demo" model="route.route">
+        <field name="route_area_id" ref="route_area_north_demo" />
+        <field name="schedule_date">2026-05-25</field>
+        <field
+            name="checkpoint_ids"
+            eval="[
+            Command.create({'partner_id': ref('base.res_partner_2')}),
+            Command.create({'partner_id': ref('base.res_partner_3')}),
+            Command.create({'latitude': 40.453370156222306, 'longitude': -3.6884337678686903}),
+        ]"
+        />
+    </record>
+    <record id="route_south_demo" model="route.route">
+        <field name="route_area_id" ref="route_area_south_demo" />
+        <field name="schedule_date">2026-05-26</field>
+        <field
+            name="checkpoint_ids"
+            eval="[
+            Command.create({'latitude': 40.41429270410794, 'longitude': -3.692142478954325}),
+            Command.create({'latitude': 40.453370156222306, 'longitude': -3.6884337678686903}),
+        ]"
+        />
+    </record>
+    <record id="route_checkpoint_with_incident_demo" model="route.checkpoint">
+        <field name="partner_id" ref="base.res_partner_12" />
+        <field name="route_id" ref="route_south_demo" />
+    </record>
+    <function
+        model="route.route"
+        name="action_planned"
+        eval="[ref('route_south_demo')]"
+    />
+    <function model="route.checkpoint" name="_action_create_incident">
+        <value eval="ref('route_checkpoint_with_incident_demo')" />
+        <value
+            eval="obj(ref('incident_type_customer_not_available_demo'))"
+            model="route.incident.type"
+        />
+        <value eval="'Incident note'" />
+    </function>
+</odoo>
