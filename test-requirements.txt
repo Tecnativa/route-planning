@@ -1,0 +1,5 @@
+odoo-addon-route_planning @ git+https://github.com/OCA/route-planning.git@refs/pull/1/head#subdirectory=route_planning
+odoo-addon-route_planning_stock @ git+https://github.com/OCA/route-planning.git@refs/pull/2/head#subdirectory=route_planning_stock
+odoo-addon-route_planning_sale_stock @ git+https://github.com/OCA/route-planning.git@refs/pull/3/head#subdirectory=route_planning_sale_stock
+odoo-addon-route_planning_delivery @ git+https://github.com/OCA/route-planning.git@refs/pull/4/head#subdirectory=route_planning_delivery
+odoo-addon-route_planning_rma_sale @ git+https://github.com/OCA/route-planning.git@refs/pull/6/head#subdirectory=route_planning_rma_sale
