@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="view_stock_return_picking_form" model="ir.ui.view">
+        <field name="model">stock.return.picking</field>
+        <field
+            name="inherit_id"
+            ref="route_planning_rma_sale.view_stock_return_picking_form"
+        />
+        <field name="arch" type="xml">
+            <field name="reception_route_area_id" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+    <record id="delivery_view_stock_return_picking_form" model="ir.ui.view">
+        <field name="model">stock.return.picking</field>
+        <field name="inherit_id" ref="rma_delivery.view_stock_return_picking_form" />
+        <field name="arch" type="xml">
+            <field name="reception_carrier_id" position="after">
+                <field
+                    name="reception_route_area_id"
+                    invisible="not create_rma or reception_carrier_delivery_type != 'route_planning'"
+                    required="reception_carrier_delivery_type=='route_planning'"
+                    groups="route_planning.group_route_planning_user"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
