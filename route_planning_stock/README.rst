@@ -39,16 +39,16 @@ routes and checkpoints from pickings.
 Configuration
 =============
 
-- Go to ``Inventory / Configuration / Operation Types``.
-- Select an existing record or create a new one.
-- Enable the ``Route Auto Confirm`` field.
+-  Go to ``Inventory / Configuration / Operation Types``.
+-  Select an existing record or create a new one.
+-  Enable the ``Route Auto Confirm`` field.
 
 Usage
 =====
 
-- Create a picking using the ``Operation Type`` specific for Route
-- Select a Route Area.
-- Confirm the picking.
+-  Create a picking using the ``Operation Type`` specific for Route
+-  Select a Route Area.
+-  Confirm the picking.
 
 The picking will be attached to an existing route with the same area, or
 a new route will be created if none exists.
@@ -74,9 +74,9 @@ Authors
 Contributors
 ------------
 
-- Pedro M. Baeza
-- Víctor Martínez
-- Carlos Lopez
+-  Pedro M. Baeza
+-  Víctor Martínez
+-  Carlos Lopez
 
 Maintainers
 -----------

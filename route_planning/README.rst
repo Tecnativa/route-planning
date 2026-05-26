@@ -103,10 +103,10 @@ contacts to populate their visit windows quickly.
 Open any contact form (``Contacts`` app) and go to the
 ``Route Planning`` tab. There you can:
 
-- Assign the contact to an ``Area``.
-- Define the contact’s ``Latitude and Longitude``.
-- Set one or more ``Visit Windows``, either manually or by selecting a
-  ``Visit Window Template``.
+-  Assign the contact to an ``Area``.
+-  Define the contact’s ``Latitude and Longitude``.
+-  Set one or more ``Visit Windows``, either manually or by selecting a
+   ``Visit Window Template``.
 
 At least the contacts that will be used as checkpoint destinations
 should be configured.
@@ -153,9 +153,9 @@ Authors
 Contributors
 ------------
 
-- Pedro M. Baeza
-- Víctor Martínez
-- Carlos Lopez
+-  Pedro M. Baeza
+-  Víctor Martínez
+-  Carlos Lopez
 
 Maintainers
 -----------
