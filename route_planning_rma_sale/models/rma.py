@@ -19,6 +19,13 @@ class Rma(models.Model):
         readonly=False,
     )
 
+    def _compute_warehouse_id(self):
+        """Support for non-RMA locations."""
+        res = super()._compute_warehouse_id()
+        for record in self.filtered(lambda x: x.location_id and not x.warehouse_id):
+            record.warehouse_id = record.location_id.warehouse_id
+        return res
+
     @api.depends("partner_shipping_id", "company_id")
     def _compute_route_area_id(self):
         for rma in self:
