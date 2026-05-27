@@ -7,7 +7,7 @@
             ref="route_planning_rma_sale.rma_rma_wizard_form_view"
         />
         <field name="arch" type="xml">
-            <field name="reception_carrier_id" position="attributes">
+            <field name="reception_route_area_id" position="attributes">
                 <attribute name="invisible">1</attribute>
             </field>
         </field>

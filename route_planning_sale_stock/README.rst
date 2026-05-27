@@ -57,9 +57,9 @@ Authors
 Contributors
 ------------
 
-- Pedro M. Baeza
-- Víctor Martínez
-- Carlos Lopez
+-  Pedro M. Baeza
+-  Víctor Martínez
+-  Carlos Lopez
 
 Maintainers
 -----------
