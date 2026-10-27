@@ -36,3 +36,10 @@ class StockMove(models.Model):
         This method is called from a picking when the route area changes.
         """
         return
+
+    def _get_stock_move_vals_from_record_route_area(self):
+        """This method will be extended by other modules to apply the appropriate
+        changes of the linked picking moves.
+        """
+        self.ensure_one()
+        return {}
